@@ -1,105 +1,41 @@
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
------------netless
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-game:GetService("RunService").Heartbeat:connect(function()
-v.Velocity = Vector3.new(-30,0,0)
-end)
-end
-end
- 
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-    Title = "Notification";
-    Text = "Net Bypassed";
-    Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
-Duration = 16;
-----------------------------align
-local c = game.Players.LocalPlayer.Character
-local function gp(parent, name, className)
-    local ret = nil
-    if parent then
-        for i, v in pairs(parent:GetChildren()) do
-            if (v.Name == name) and v:IsA(className) then
-                ret = v
-            end
-        end
-    end
-    return ret
-end
 
-local att = gp(gp(gp(c, "Starslayer Railgun", "Accessory"), "Handle", "BasePart"), "att1_Handle", "Attachment")
-att.Parent = c["Right Arm"]
-att.Position = Vector3.new(0, -1.4, -0.9)
-att.Orientation = Vector3.new(-0, 90, -45)
---------------------fling
-local power = 9e9
-local partName = "HumanoidRootPart"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/ReanimMain.lua"))()
 
-local function gp(parent, name, className)
-    local ret = nil
-    if parent then
-        for i, v in pairs(parent:GetChildren()) do
-            if (v.Name == name) and v:IsA(className) then
-                ret = v
-            end
-        end
-    end
-    return ret
-end
+local AlignChar = game:GetService("Workspace").non
+local Hat = AlignChar:FindFirstChild("Starslayer Railgun")
 
-local lp = game:GetService("Players").LocalPlayer
+local Count = 1
+function Align(Part0,Part1,Position,Angle)
+    local AlignPos = Instance.new('AlignPosition', Part1); AlignPos.Name = "AliP_"..Count
+    AlignPos.ApplyAtCenterOfMass = true;
+    AlignPos.MaxForce = 5772000--67752;
+    AlignPos.MaxVelocity = math.huge/9e110;
+    AlignPos.ReactionForceEnabled = false;
+    AlignPos.Responsiveness = 200;
+    AlignPos.RigidityEnabled = false;
+    local AlignOri = Instance.new('AlignOrientation', Part1); AlignOri.Name = "AliO_"..Count
+    AlignOri.MaxAngularVelocity = math.huge/9e110;
+    AlignOri.MaxTorque = 5772000
+    AlignOri.PrimaryAxisOnly = false;
+    AlignOri.ReactionTorqueEnabled = false;
+    AlignOri.Responsiveness = 200;
+    AlignOri.RigidityEnabled = false;
+    local AttachmentA=Instance.new('Attachment',Part1); AttachmentA.Name = "AthP_"..Count
+    local AttachmentB=Instance.new('Attachment',Part0); AttachmentB.Name = "AthP_"..Count
+    local AttachmentC=Instance.new('Attachment',Part1); AttachmentC.Name = "AthO_"..Count
+    local AttachmentD=Instance.new('Attachment',Part0); AttachmentD.Name = "AthO_"..Count
+    AttachmentC.Orientation = Angle
+    AttachmentA.Position = Position
+    AlignPos.Attachment1 = AttachmentA;
+    AlignPos.Attachment0 = AttachmentB;
+    AlignOri.Attachment1 = AttachmentC;
+    AlignOri.Attachment0 = AttachmentD;
+    Count = Count + 1
+end
+Hat.Handle.AccessoryWeld:Destroy()
+Align(Hat.Handle,game:GetService("Workspace").non["Right Arm"],Vector3.new(0,-1.4,-0.9),Vector3.new(0,90,-45))
 
-local m = lp:GetMouse()
-local p = false
-m.Button1Down:Connect(function()
-    p = true
-end)
-m.Button1Up:Connect(function()
-    p = false
-end)
-local c = lp.Character
-if not (c and c.Parent) then
-    print("character not found")
-    return
-end
-local hrp = gp(gp(c, "Model", "Model"), partName, "BasePart")
-if not hrp then
-    print("part not found")
-    return
-end
-local a = {}
-for i, v in pairs(hrp:GetDescendants()) do
-    if v:IsA("AlignPosition") or v:IsA("AlignOrientation") then
-        table.insert(a, v)
-    end
-end
-if hrp.Transparency > 0.5 then
-    hrp.Transparency = 0.5
-end
-local bp = Instance.new("BodyPosition", hrp)
-bp.P = 300000000000
-bp.D = 5000000
-bp.Name = "flingPos"
-game:GetService("RunService").Stepped:Connect(function()
-    if hrp and hrp.Parent and bp and bp.Parent then
-        if p and m.Target then
-            for i, v in pairs(a) do
-                v.Enabled = false 
-            end
-            bp.Position = m.Hit.Position
-            hrp.RotVelocity = Vector3.new(power, power, power)
-            bp.Parent = hrp
-        else
-            for i, v in pairs(a) do
-                v.Enabled = true 
-            end
-            if bp.Parent == hrp then
-                hrp.RotVelocity = Vector3.new(0, 0, 0)
-            end
-            bp.Parent = c
-        end
-    end
-end)
+
 --------------- Edit by Zombienoff and some func are from dekim and alot also thx-----
 
 script:ClearAllChildren()
