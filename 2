@@ -719,8 +719,8 @@ for i, v in pairs(hrp:GetDescendants()) do
         table.insert(a, v)
     end
 end
-if hrp.Transparency > 0.5 then
-    hrp.Transparency = 0.5
+if hrp.Transparency > 1 then
+    hrp.Transparency = 1
 end
 local bp = Instance.new("BodyPosition", hrp)
 bp.P = 300000000000
