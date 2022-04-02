@@ -1823,6 +1823,31 @@ function banerror(Foe)
 	end
 end
 
+local Character = game.Players.LocalPlayer.Character -- Replace this with your rig's character if permadeath
+
+local firstSpawn = nil
+
+for _, descendant in pairs(workspace:GetDescendants()) do
+    if descendant:IsA("SpawnLocation") then
+            firstSpawn = descendant.Position
+    end
+end
+    local Humanoid = Character:WaitForChild("Humanoid")
+    local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+    
+local function OnHumanoidFreeFalling(Active)
+    while Active == true do
+        if HumanoidRootPart.Position.Y < -100 then
+            print("Falling")
+            Character:MoveTo(firstSpawn)
+            Character.HumanoidRootPart.Anchored = true
+        end
+        wait(0.1)
+        Character.HumanoidRootPart.Anchored = false
+    end
+end
+
+Humanoid.FreeFalling:Connect(OnHumanoidFreeFalling)
 
 function ApplyAoE(POSITION,RANGE,ISBANISH)
 	local CHILDREN = workspace:GetDescendants()
