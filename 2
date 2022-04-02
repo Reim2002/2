@@ -2739,19 +2739,19 @@ function FoxRampage()
 				MagicSphere(VT(SIZE / 5, SIZE / 5, SIZE * 2), 65, CF(CFRAME * CF(MRANDOM(-5, 5), MRANDOM(-5, 5), MRANDOM(-5, 5)).p, CFRAME.p), "White", VT(0.001, 0.001, 0), 0.5)
 			end
 			do
-				local Part = CreatePart2(3, Effects, HITFLOOR.Material, 0, 0, HITFLOOR.BrickColor, "Debree", VT(SIZE / 5, SIZE / 5, SIZE / 5))
-				Part.CFrame = CFRAME * CF(SIZE / 1.5, -0.7, 0) * ANGLES(RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)))
+		--		local Part = CreatePart2(3, Effects, HITFLOOR.Material, 0, 0, HITFLOOR.BrickColor, "color", VT(SIZE / 5, SIZE / 5, SIZE / 5))
+		--		Part.CFrame = CFRAME * CF(SIZE / 1.5, -0.7, 0) * ANGLES(RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)))
 				coroutine.resume(coroutine.create(function()
 					Swait(200)
 					Part.Anchored = false
 				end))
-				local Part = CreatePart2(3, Effects, HITFLOOR.Material, 0, 0, HITFLOOR.BrickColor, "Debree", VT(SIZE / 5, SIZE / 5, SIZE / 5))
-				Part.CFrame = CFRAME * CF(-SIZE / 1.5, -0.7, 0) * ANGLES(RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)))
+		--		local Part = CreatePart2(3, Effects, HITFLOOR.Material, 0, 0, HITFLOOR.BrickColor, "color", VT(SIZE / 5, SIZE / 5, SIZE / 5))
+			--	Part.CFrame = CFRAME * CF(-SIZE / 1.5, -0.7, 0) * ANGLES(RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)))
 				coroutine.resume(coroutine.create(function()
 					Swait(200)
 					Part.Anchored = false
 				end))
-				MagicSphere(VT(SIZE, SIZE, SIZE), 75, CFRAME, "White", VT(-SIZE / 75, -SIZE / 75, -SIZE / 75))
+				MagicSphere(VT(SIZE, SIZE, SIZE), 75, CFRAME, "color", VT(-SIZE / 75, -SIZE / 75, -SIZE / 75))
 				ApplyAoE(CFRAME.Position,SIZE/2,true)
 				SIZE = SIZE + 2
 				CFRAME = CFRAME * CF(0, 0, -2)
@@ -2761,8 +2761,8 @@ function FoxRampage()
 			end
 		end
 	end))
-	MagicSphere(VT(0.1, 0.1, 0.1), 45, RightArm.CFrame, "White", VT(0.1, 5, 0.1))
-	MagicSphere(VT(0.1, 0.1, 0.1), 45, RightArm.CFrame, "White", VT(0.05, 5, 0.05))
+	MagicSphere(VT(0.1, 0.1, 0.1), 45, RightArm.CFrame, "color", VT(0.1, 5, 0.1))
+	MagicSphere(VT(0.1, 0.1, 0.1), 45, RightArm.CFrame, "color", VT(0.05, 5, 0.05))
 	for i = 0, 3, 0.1 / Animation_Speed do
 		Swait()
 		RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0 - 0.04 * SIN(SINE / 24)*SIZE, 0 + 0.04 * SIN(SINE / 12)*SIZE, 0 + 0.05*SIZE * COS(SINE / 12)) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(0 - 2.5 * SIN(SINE / 24)), RAD(0)), 1 / Animation_Speed)
