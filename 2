@@ -1,3 +1,11 @@
+local lp = game:GetService("Players").LocalPlayer
+	
+for i,v in pairs(lp.Character:GetDescendants()) do
+		if v:IsA("Decal") and v.Name == 'face' then
+			v:Destroy()
+		end
+	end
+
 local netboost = 100 --velocity 
 --netboost usage: 
 --set to false to disable
@@ -669,6 +677,7 @@ att.Parent = c["Right Arm"]
 att.Position = Vector3.new(0, -1.4, -0.9)
 att.Orientation = Vector3.new(-0, 90, -45)
 --------------------fling
+wait(0.5)
 local power = 9e9
 local partName = "HumanoidRootPart"
 
@@ -1652,9 +1661,29 @@ for _, c in pairs(Weapon:GetChildren()) do
 	end
 end
 
+local NAMEBILL = Instance.new("BillboardGui",Character)
+NAMEBILL.AlwaysOnTop = true
+NAMEBILL.Size = UDim2.new(7,35,3,15)
+NAMEBILL.StudsOffset = Vector3.new(0,2,0)
+NAMEBILL.MaxDistance = 10000
+NAMEBILL.Adornee = Head
+NAMEBILL.Name = "NameBillboard"
+local NAMEMODE = Instance.new("TextLabel",NAMEBILL)
+NAMEMODE.BackgroundTransparency = 1
+NAMEMODE.TextScaled = false
+NAMEMODE.BorderSizePixel = 0
+NAMEMODE.Text = "N O R M A L"
+NAMEMODE.Font = "Antique"
+NAMEMODE.TextSize = 30
+NAMEMODE.TextStrokeTransparency = 0
+NAMEMODE.Size = UDim2.new(1,0,0.5,0)
+NAMEMODE.Parent = NAMEBILL
+NAMEMODE.TextColor3 = Color3.fromRGB(0,0,0)
+NAMEMODE.TextStrokeColor3 = Color3.new(0,0,0)
 
-
-
+function ChangeName(Text)
+	NAMEMODE.Text = Text
+end
 
 local SKILLTEXTCOLOR = C3(1,1,1)
 local SKILLFONT = "Bodoni"
@@ -2040,11 +2069,13 @@ function God()
 	if mode == "normal" then
 		eff()
 		mode = "DearGod"
-		sick.SoundId = "rbxassetid://5997090768"	
+		ChangeName("D E A R G O D")
+		sick.SoundId = "rbxassetid://6788594837"	
 		fig = color
 	elseif mode == "DearGod" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2055,11 +2086,13 @@ function FAT()
 	if mode == "normal" then
 		eff()
 		mode = "Tpose"
+		ChangeName("F A T")
 		sick.SoundId = "rbxassetid://1755770760"	
 		fig = color
 	elseif mode == "Tpose" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2070,11 +2103,13 @@ function MEMER()
 	if mode == "normal" then
 		eff()
 		mode = "Meme"
+		ChangeName("M E M E R")
 		sick.SoundId = "rbxassetid://3752451341"	
 		fig = color
 	elseif mode == "Meme" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2085,11 +2120,13 @@ function VISITOR()
 	if mode == "normal" then
 		eff()
 		mode = "Vis"
-		sick.SoundId = "rbxassetid://758186003"	
+		ChangeName("V I S U A L I Z E R")
+		sick.SoundId = "rbxassetid://6779103246"	
 		fig = color
 	elseif mode == "Vis" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2100,11 +2137,13 @@ function KASPERLOL()
 	if mode == "normal" then
 		eff()
 		mode = "GHOST"
-		sick.SoundId = "rbxassetid://1747451164"	
+		ChangeName("G H O S T")
+		sick.SoundId = "rbxassetid://6879637916"	
 		fig = color
 	elseif mode == "GHOST" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2115,11 +2154,13 @@ function Devils()
 	if mode == "normal" then
 		eff()
 		mode = "burning"
-		sick.SoundId = "rbxassetid://932923622"	
+		ChangeName("D E V I L S")
+		sick.SoundId = "rbxassetid://6904134869"	
 		fig = color
 	elseif mode == "burning" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2130,11 +2171,13 @@ function Scout()
 	if mode == "normal" then
 		eff()
 		mode = "Sniper"
-		sick.SoundId = "rbxassetid://5482245516"	
+		ChangeName("S N I P E R")
+		sick.SoundId = "rbxassetid://6868205194"	
 		fig = color
 	elseif mode == "Sniper" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2145,11 +2188,13 @@ function Secrets()
 	if mode == "normal" then
 		eff()
 		mode = "Secret"
-		sick.SoundId = "rbxassetid://5447362300"	
+		ChangeName("S E C R E T S")
+		sick.SoundId = "rbxassetid://6809266706"	
 		fig = color
 	elseif mode == "Secret" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2160,11 +2205,13 @@ function FUCK()
 	if mode == "normal" then
 		eff()
 		mode = "fucker"
-		sick.SoundId = "rbxassetid://2112150271"	
+		ChangeName("F U C K E R")
+		sick.SoundId = "rbxassetid://7024824657"	
 		fig = color
 	elseif mode == "fucker" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2175,11 +2222,13 @@ function Dream()
 	if mode == "normal" then
 		eff()
 		mode = "Nightmare"
-		sick.SoundId = "rbxassetid://5541841785"	
+		ChangeName("N I G H T M A R E")
+		sick.SoundId = "rbxassetid://6882732597"	
 		fig = color
 	elseif mode == "Nightmare" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2190,11 +2239,13 @@ function NIGGER()
 	if mode == "normal" then
 		eff()
 		mode = "NIGGAS"
-		sick.SoundId = "rbxassetid://5541841785"	
+		ChangeName("B L O O D W A T E R")
+		sick.SoundId = "rbxassetid://6864202145"	
 		fig = color
 	elseif mode == "NIGGAS" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2205,11 +2256,13 @@ function Demon()
 	if mode == "normal" then
 		eff()
 		mode = "Demons"
-		sick.SoundId = "rbxassetid://890538898"	
+		ChangeName("D E M O N")
+		sick.SoundId = "rbxassetid://6879061454"	
 		fig = color
 	elseif mode == "Demons" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
