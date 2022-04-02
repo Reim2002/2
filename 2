@@ -672,10 +672,10 @@ local function gp(parent, name, className)
     return ret
 end
 
-local att = gp(gp(gp(c, "Starslayer Railgun", "Accessory"), "Handle", "BasePart"), "att1_Handle", "Attachment")
+local att = gp(gp(gp(c, "Cartoony Rainbow Rifle", "Accessory"), "Handle", "BasePart"), "att1_Handle", "Attachment")
 att.Parent = c["Right Arm"]
-att.Position = Vector3.new(0, -1.4, -0.9)
-att.Orientation = Vector3.new(-0, 90, -45)
+att.Position = Vector3.new(0, -1.4, -0.6)
+att.Orientation = Vector3.new(-0, 90, -130)
 --------------------fling
 wait(0.5)
 local power = 9e9
@@ -1546,79 +1546,79 @@ function ParticleEmitter(Table)
 	return PRTCL
 end
 
-local Handle = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.2,0.6,0.2),false)
+local Handle = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 local RightArmGrasp = CreateWeldOrSnapOrMotor("Weld", Handle, RightArm, Handle, CF(0,-1, 0) * ANGLES(RAD(90), RAD(0), RAD(0)), CF(0, 0.21, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.2,0.5,0.2),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Wedge")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.3, 0.2) * ANGLES(RAD(0), RAD(180), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.2,0.3,0.2),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Wedge")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.4, 0) * ANGLES(RAD(0), RAD(0), RAD(180)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.3,0.3,0.3),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.5, 0.2) * ANGLES(RAD(0), RAD(0), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.3,0.5,0.5),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 0.5) * ANGLES(RAD(0), RAD(0), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.4,0.4,0.4),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Cyl")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 0.5) * ANGLES(RAD(90), RAD(0), RAD(0)), CF(0, 0, 0))
 for i = 1, 8 do
-	local Piece = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Eye", VT(0,0.35,0.41),false)
+	local Piece = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Eye", VT(0,0,0),false)
 	CreateWeldOrSnapOrMotor("Weld", Handle, Part, Piece, CF(0, 0, 0) * ANGLES(RAD(0), RAD((360/8)*i), RAD(0)), CF(0, 0, 0))
 end
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Eye", VT(0.38,0.41,0.38),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Eye", VT(0,0,0),false)
 MakeForm(Part,"Cyl")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 0.5) * ANGLES(RAD(90), RAD(0), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.37,0.5,0.37),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Ball")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 0.3) * ANGLES(RAD(90), RAD(0), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.2,0.7,0.4),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Wedge")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.7, 0.5) * ANGLES(RAD(90), RAD(180), RAD(180)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.3,0.4,0.2),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 0.7) * ANGLES(RAD(0), RAD(0), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.35,0.35,0.35),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Cyl")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 0.7) * ANGLES(RAD(90), RAD(0), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.5,0.1,0.5),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Cyl")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 1) * ANGLES(RAD(90), RAD(0), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.5,0.1,0.45),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Cyl")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 1.1) * ANGLES(RAD(90), RAD(0), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.2,0.5,0.2),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Wedge")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.55, 0.2) * ANGLES(RAD(-135), RAD(0), RAD(0)), CF(0, -0.3, 0))
 local LASTPART = Handle
 for i = 1, 10 do
 	if LASTPART == Handle then
-		local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.1,0.2,0),false)
+		local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 		LASTPART = Part
 		CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.1, 0.2) * ANGLES(RAD(90), RAD(0), RAD(0)), CF(0, 0, 0))
 	else
-		local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.1,0.05,0),false)
+		local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 		CreateWeldOrSnapOrMotor("Weld", Handle, LASTPART, Part, CF(0, 0.025, 0) * ANGLES(RAD(8), RAD(0), RAD(0)), CF(0, -0.025, 0))
 		LASTPART = Part
 	end
 end
 
-local Barrel = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.15,2,0.15),false)
+local Barrel = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Barrel,"Cyl")
 CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Barrel, CF(0, -0.6, 1.8) * ANGLES(RAD(90), RAD(0), RAD(0)), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0.25,1,0.25),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Cyl")
 CreateWeldOrSnapOrMotor("Weld", Handle, Barrel, Part, CF(0, -0.6, 0), CF(0, 0, 0))
-local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0.1,0.2),false)
+local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 MakeForm(Part,"Wedge")
 CreateWeldOrSnapOrMotor("Weld", Handle, Barrel, Part, CF(0, 0.945, 0.1) * ANGLES(RAD(180), RAD(0), RAD(0)), CF(0, 0, 0))
-local Hole = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Eye", VT(0.125,0,0.125),false)
+local Hole = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Eye", VT(0,0,0),false)
 MakeForm(Hole,"Cyl")
 CreateWeldOrSnapOrMotor("Weld", Handle, Barrel, Hole, CF(0, 0.98, 0), CF(0, 0, 0))
 local Part = CreatePart(3, Weapon, "Metal", 0, 0, "Mid gray", "Part", VT(0,0,0),false)
 local GEARWELD = CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 0.7), CF(0, 0, 0))
-CreateMesh("SpecialMesh", Part, "FileMesh", 156292343, "", VT(0.8,0.8,1.5), VT(0,0,0.2))
+CreateMesh("SpecialMesh", Part, "FileMesh", 156292343, "", VT(0,0,0), VT(0,0,0))
 local Part = CreatePart(3, Weapon, "Metal", 0, 0.5, "Mid gray", "Eye", VT(0,0,0),false)
 local GEARWELD2 = CreateWeldOrSnapOrMotor("Weld", Handle, Handle, Part, CF(0, -0.6, 0.7), CF(0, 0, 0))
-CreateMesh("SpecialMesh", Part, "FileMesh", 156292343, "", VT(0.9,0.9,0.3), VT(0,0,0.2))
+CreateMesh("SpecialMesh", Part, "FileMesh", 156292343, "", VT(0,0,0), VT(0,0,0))
 coroutine.resume(coroutine.create(function()
 	while wait() do
 		GEARWELD.C0 = GEARWELD.C0 * ANGLES(RAD(0), RAD(0), RAD(5))
@@ -2704,6 +2704,76 @@ function Dash()
 		LeftHip.C0 = Clerp(LeftHip.C0, CFrame.new(-1, -1, 0) * CFrame.Angles(math.rad(0), math.rad(-65), math.rad(0)) * CFrame.Angles(math.rad(-5), math.rad(0), math.rad(0)), 1 / 3)
 	end
 	ATTACK = false
+end
+
+function FoxRampage()
+	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Your attack is an insult.','All')
+	CreateSound(907332525, Torso, 9999, 1, false)
+	wait(1)
+	ATTACK = true
+	Rooted = false
+	for i = 0, 2, 0.1 / Animation_Speed do
+		Swait()
+		turnto(Mouse.Hit.p)
+		RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0 * Player_Size, 0 * Player_Size, -0.2 * Player_Size + 0.05 * COS(SINE / 12) * Player_Size) * ANGLES(RAD(0), RAD(0), RAD(-85)), 0.15 / Animation_Speed)
+		Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0 * Player_Size, 0 * Player_Size, 0 + ((1 * Player_Size) - 1)) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(0), RAD(85)), 0.2 / Animation_Speed)
+		RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5 * Player_Size, 0.5 * Player_Size, 0 * Player_Size) * ANGLES(RAD(90+(MRANDOM(-45,45)/10)), RAD(0), RAD(12)) * RIGHTSHOULDERC0, 3 / Animation_Speed)
+		LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5 * Player_Size, 0.5 * Player_Size, 0 * Player_Size) * ANGLES(RAD(90), RAD(0), RAD(-85)) * LEFTSHOULDERC0, 0.15 / Animation_Speed)
+		RightHip.C0 = Clerp(RightHip.C0, CF(1 * Player_Size, -1 * Player_Size, -0 * Player_Size) * ANGLES(RAD(0), RAD(90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.15 / Animation_Speed)
+		LeftHip.C0 = Clerp(LeftHip.C0, CF(-1 * Player_Size, -1 * Player_Size, -0 * Player_Size) * ANGLES(RAD(0), RAD(-90), RAD(0)) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.15 / Animation_Speed)
+	end
+	local HITFLOOR = Raycast(RootPart.Position, CF(RootPart.Position, RootPart.Position + VT(0, -1, 0)).lookVector, 4 * Player_Size, Character)
+	repeat
+		Swait()
+		HITFLOOR = Raycast(RootPart.Position, CF(RootPart.Position, RootPart.Position + VT(0, -1, 0)).lookVector, 4 * Player_Size, Character)
+	until HITFLOOR ~= nil
+	local SOUND = CreateSound("415700134", Effects, 10, 1.6)
+	CreateSound("138677306", Effects, 7, 1.2)
+	CreateSound("159882598", Effects, 10, MRANDOM(10, 10) / 10)
+	coroutine.resume(coroutine.create(function()
+		local CFRAME = RootPart.CFrame * CF(0, -1.2, -3)
+		local SIZE = 1
+		while true do
+			Swait()
+			for i = 1, 2 do
+				MagicSphere(VT(SIZE / 5, SIZE / 5, SIZE * 2), 65, CF(CFRAME * CF(MRANDOM(-5, 5), MRANDOM(-5, 5), MRANDOM(-5, 5)).p, CFRAME.p), "White", VT(0.001, 0.001, 0), 0.5)
+			end
+			do
+				local Part = CreatePart2(3, Effects, HITFLOOR.Material, 0, 0, HITFLOOR.BrickColor, "Debree", VT(SIZE / 5, SIZE / 5, SIZE / 5))
+				Part.CFrame = CFRAME * CF(SIZE / 1.5, -0.7, 0) * ANGLES(RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)))
+				coroutine.resume(coroutine.create(function()
+					Swait(200)
+					Part.Anchored = false
+				end))
+				local Part = CreatePart2(3, Effects, HITFLOOR.Material, 0, 0, HITFLOOR.BrickColor, "Debree", VT(SIZE / 5, SIZE / 5, SIZE / 5))
+				Part.CFrame = CFRAME * CF(-SIZE / 1.5, -0.7, 0) * ANGLES(RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)), RAD(MRANDOM(-180, 180)))
+				coroutine.resume(coroutine.create(function()
+					Swait(200)
+					Part.Anchored = false
+				end))
+				MagicSphere(VT(SIZE, SIZE, SIZE), 75, CFRAME, "White", VT(-SIZE / 75, -SIZE / 75, -SIZE / 75))
+				ApplyAoE(CFRAME.Position,SIZE/2,true)
+				SIZE = SIZE + 2
+				CFRAME = CFRAME * CF(0, 0, -2)
+				if SOUND.Playing == false then
+					break
+				end
+			end
+		end
+	end))
+	MagicSphere(VT(0.1, 0.1, 0.1), 45, RightArm.CFrame, "White", VT(0.1, 5, 0.1))
+	MagicSphere(VT(0.1, 0.1, 0.1), 45, RightArm.CFrame, "White", VT(0.05, 5, 0.05))
+	for i = 0, 3, 0.1 / Animation_Speed do
+		Swait()
+		RootJoint.C0 = Clerp(RootJoint.C0,ROOTC0 * CF(0 - 0.04 * SIN(SINE / 24)*SIZE, 0 + 0.04 * SIN(SINE / 12)*SIZE, 0 + 0.05*SIZE * COS(SINE / 12)) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(0 - 2.5 * SIN(SINE / 24)), RAD(0)), 1 / Animation_Speed)
+		Neck.C0 = Clerp(Neck.C0, NECKC0 * CF(0, 0, 0) * ANGLES(RAD(0), RAD(0), RAD(0)), 0.15 / Animation_Speed)
+		RightShoulder.C0 = Clerp(RightShoulder.C0, CF(1.5, 0.5, -0.3) * ANGLES(RAD(85), RAD(0), RAD(0)) * RIGHTSHOULDERC0, 0.5 / Animation_Speed)
+		LeftShoulder.C0 = Clerp(LeftShoulder.C0, CF(-1.5, 0.5, 0) * ANGLES(RAD(0), RAD(0), RAD(-12)) * LEFTSHOULDERC0, 0.5 / Animation_Speed)
+		RightHip.C0 = Clerp(RightHip.C0, CF(1*SIZE, -1*SIZE + 0.06 * SIN(SINE / 24) - 0.05*SIZE * COS(SINE / 12), -0.01*SIZE) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(75), RAD(0)) * ANGLES(RAD(-2 - 2.5 * SIN(SINE / 24)), RAD(0), RAD(0)), 1 / Animation_Speed)
+		LeftHip.C0 = Clerp(LeftHip.C0, CF(-1*SIZE, -1*SIZE - 0.06 * SIN(SINE / 24) - 0.05*SIZE * COS(SINE / 12), -0.01*SIZE) * ANGLES(RAD(0 - 2.5 * SIN(SINE / 12)), RAD(-75), RAD(0)) * ANGLES(RAD(-2 + 2.5 * SIN(SINE / 24)), RAD(0), RAD(0)), 1 / Animation_Speed)
+	end
+	ATTACK = false
+	Rooted = false
 end
 
 function SHOTNIGGA()
@@ -4225,6 +4295,10 @@ function KeyDown(Key)
 	
 		if Key == "f" and ATTACK == false then
 		Dash()
+	end
+	
+			if Key == "n" and ATTACK == false then
+		FoxRampage()
 	end
 	
 			if Key == "2" and ATTACK == false then
