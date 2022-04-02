@@ -2063,12 +2063,14 @@ function omg()
 	if mode == "normal" then
 		eff()
 		mode = "begone"
+		ChangeName("B E G O N E")
 		fig = color
 		sick.TimePosition = 15
 		sick.SoundId = "rbxassetid://3164389653"
 	elseif mode == "begone" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		fig = color
 		sick.SoundId = "rbxassetid://207790293"
 	else
@@ -2079,11 +2081,13 @@ function hehe()
 	if mode == "normal" then
 		eff()
 		mode = "bad"
+		ChangeName("B A D")
 		sick.SoundId = "rbxassetid://1755770760"	
 		fig = color
 	elseif mode == "bad" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
@@ -2298,11 +2302,13 @@ function switch()
 	if mode == "normal" then
 		eff()
 		mode = "rainbow"
+		ChangeName("R A I N B O W")
 		sick.SoundId = "rbxassetid://2875069791"
 		fig = color
 	elseif mode == "rainbow" then
 		eff()
 		mode = "normal"
+		ChangeName("N O R M A L")
 		sick.SoundId = "rbxassetid://207790293"
 		fig = color
 	else
