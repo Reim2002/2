@@ -10779,9 +10779,9 @@ sick.PlaybackSpeed = 1
 		rwing5.Parent = nil
 		rwing6.Parent = nil
 		
-		SBGUN.Weapon.gun.Color = Color3.fromRGB(MRANDOM(1,255),MRANDOM(1,255),MRANDOM(1,255))
-		SBGUN.Weapon.HOLE.Color = Color3.fromRGB(MRANDOM(1,255),MRANDOM(1,255),MRANDOM(1,255))
-		SBGUN.Weapon.Handle.Color = Color3.fromRGB(MRANDOM(1,255),MRANDOM(1,255),MRANDOM(1,255))
+	--	SBGUN.Weapon.gun.Color = Color3.fromRGB(MRANDOM(1,255),MRANDOM(1,255),MRANDOM(1,255))
+	--	SBGUN.Weapon.HOLE.Color = Color3.fromRGB(MRANDOM(1,255),MRANDOM(1,255),MRANDOM(1,255))
+	--	SBGUN.Weapon.Handle.Color = Color3.fromRGB(MRANDOM(1,255),MRANDOM(1,255),MRANDOM(1,255))
 
 		HandleWeld.C1 = Clerp(HandleWeld.C1, CF(0,0 + .65 * COS(SINE/40)+ .125 * COS(SINE / 25),0) * ANGLES(RAD(0 + 15 * SIN(SINE / 50)), RAD(-SINE-3*COS(SINE / 25)), RAD(-0 + 15 * SIN(SINE / 50)+ 15 * COS(SINE / 25))), 0.15)
 		handlexweld.C1=Clerp(handlexweld.C1,CFrame.new(0,-2,-2.05)*ANGLES(math.rad(0),math.rad(0),math.rad(0)),1)
@@ -10965,23 +10965,13 @@ sick.PlaybackSpeed = 1
 
 	if MODE == "ECHOV1" then
 	if WEAPONEQUIPPED == false then
-		Blade.Parent = nil
-		BackBlade.Parent = Character
+--		Blade.Parent = nil
+	--	BackBlade.Parent = Character
 		sick.PlaybackSpeed = 1
 	else
-		Blade.Parent = Character
-		BackBlade.Parent = nil
+--		Blade.Parent = Character
+	--	BackBlade.Parent = nil
 		sick.PlaybackSpeed = .8
 	end
-	if Bladee.Parent == Character then
-		WEAPONEQUIPPED = true
-	else
-		WEAPONEQUIPPED = false
-	end
-	if BackBlade.Parent == Character then
-		WEAPONEQUIPPED = false
-	else
-		WEAPONEQUIPPED = true
-		end
-		end
+end
 end
