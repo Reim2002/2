@@ -1720,8 +1720,8 @@ while true do
 		ANIM = "Midair"
 		if ATTACK == false then
 			NK.C0 = NK.C0:lerp(NKC0,.1)
-			game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,-5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
-			game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
+--			game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,-5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
+--			game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
 		    RJ.C0 = Clerp(RJ.C0,RJC0 * CF(0, 0, 0) * ANGLES(math.rad(-(change * 20) - movement / 20 * math.cos(SINE / 2)) * (lookvector / (Humanoid.WalkSpeed * 2)) + math.rad(velocityYFall3 / 10), math.rad(0), math.rad(-(change * 20) - movement / 20 * math.cos(SINE / 2)) * (rightvector / (Humanoid.WalkSpeed * 2))), .1)
 			RS.C0 = Clerp(RS.C0, CF(1.5, 0.55 - velocityYFall3 / 70, 0) * ANGLES(math.rad(-velocityYFall3 / 10), math.rad(0), math.rad(-velocityYFall)), .2)
 			LS.C0 = Clerp(LS.C0, CF(-1.5, 0.55 - velocityYFall3 / 70, 0) * ANGLES(math.rad(-velocityYFall3 / 10), math.rad(0), math.rad(velocityYFall)), .2)
