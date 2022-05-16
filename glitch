@@ -1,3 +1,4 @@
+
 game.Players.LocalPlayer.Character['InternationalFedora'].Handle.SpecialMesh:Destroy()
 wait()
 game.Players.LocalPlayer.Character['International Fedora'].Handle.SpecialMesh:Destroy()
@@ -1051,6 +1052,21 @@ please make that known before assuming
 have fun!
 --]]
 
+local Character = game.Players.LocalPlayer.Character
+local naeeym = Instance.new("BillboardGui",Character)
+naeeym.Size = UDim2.new(0,100,0,40)
+naeeym.StudsOffset = Vector3.new(0,2,0)
+naeeym.Adornee = Character.Head
+local tecks = Instance.new("TextLabel",naeeym)
+tecks.BackgroundTransparency = 1
+tecks.BorderSizePixel = 0
+tecks.Text = "ARCADE KILLER"
+tecks.Font = "Arcade"
+tecks.FontSize = "Size24"
+tecks.TextStrokeTransparency = 0
+tecks.TextStrokeColor3 = Color3.new(1,1,1)
+tecks.TextColor3 = Color3.new(0,0,0)
+tecks.Size = UDim2.new(1,0,0.5,0)
 
 Player = game:GetService("Players").LocalPlayer
 PlayerGui = Player.PlayerGui
@@ -1464,6 +1480,10 @@ att1.Orientation = Vector3.new(90, 0, -0)
 
     mode4()
 end
+
+if KeyPressed == "5" then
+    mode5()
+end
 end)
 
 function mode1()
@@ -1472,8 +1492,16 @@ function mode1()
 		sick.SoundId = "rbxassetid://9042666762"
 sick.Name = ""
 		mode = "begone"
+		
+tecks.Text = "C H I L L"
+tecks.Font = "GothamBlack"
+		
 	elseif mode == "begone" then
 		mode = "NIGGERS"
+		
+tecks.Text = "ARCADE KILLER"
+tecks.Font = "Arcade"
+		
         sick.SoundId = "rbxassetid://9048378262"
         sick.PlaybackSpeed  = 2
 	else
@@ -1483,11 +1511,19 @@ end
 function mode2()
 	if mode == "NIGGERS" then
 		mode = "SKID"
+
+tecks.Text = "I N S A N E L O R D"
+tecks.Font = "Highway"
+
 		sick.TimePosition = 15
         sick.PlaybackSpeed = 2
 		sick.SoundId = "rbxassetid://9048374150"
 	elseif mode == "SKID" then
 		mode = "NIGGERS"
+		
+		tecks.Text = "ARCADE KILLER"
+tecks.Font = "Arcade"
+		
         sick.SoundId = "rbxassetid://9048378262"
 	else
 	end
@@ -1496,11 +1532,19 @@ end
 function mode3()
 	if mode == "NIGGERS" then
 		mode = "COOL"
+		
+		tecks.Text = "P H O N K M O N S T E R"
+tecks.Font = "SciFi"
+		
 		sick.TimePosition = 15
         sick.PlaybackSpeed = 2
 		sick.SoundId = "rbxassetid://5376903281"
 	elseif mode == "COOL" then
 		mode = "NIGGERS"
+		
+				tecks.Text = "ARCADE KILLER"
+tecks.Font = "Arcade"
+		
         sick.SoundId = "rbxassetid://9048378262"
 	else
 	end
@@ -1509,11 +1553,41 @@ end
 function mode4()
 	if mode == "NIGGERS" then
 		mode = "NIGGA"
+		
+tecks.Text = "F A N T A S Y L O R D"
+tecks.Font = "Bodoni"
+		
 		sick.TimePosition = 15
         sick.PlaybackSpeed = 2
 		sick.SoundId = "rbxassetid://8083732886"
 	elseif mode == "NIGGA" then
 		mode = "NIGGERS"
+		
+				tecks.Text = "ARCADE KILLER"
+tecks.Font = "Arcade"
+		
+        sick.SoundId = "rbxassetid://9048378262"
+	else
+	end
+end
+
+
+function mode5()
+	if mode == "NIGGERS" then
+		mode = "MAGICIAN"
+		
+				tecks.Text = "W I Z A R D"
+tecks.Font = "Cartoon"
+		
+		sick.TimePosition = 15
+        sick.PlaybackSpeed = 2
+		sick.SoundId = "rbxassetid://1838549060"
+	elseif mode == "MAGICIAN" then
+		mode = "NIGGERS"
+		
+				tecks.Text = "ARCADE KILLER"
+tecks.Font = "Arcade"
+		
         sick.SoundId = "rbxassetid://9048378262"
 	else
 	end
@@ -1815,6 +1889,22 @@ att2.Orientation = Vector3.new(130, 0, -0)
 			RH.C0 = RH.C0:lerp(RHC0*CFrame.new(0+0.05*COS(SINE/22),0.5,-0.8+0.05*COS(SINE/22))*CFrame.Angles(math.rad(-5-4*SIN(SINE/22)),math.rad(-15-4*SIN(SINE/22)),math.rad(15-4*SIN(SINE/22))),Alpha)
 			LH.C0 = LH.C0:lerp(LHC0*CFrame.new(-0.2+0.05*COS(SINE/22),-0.2,-0.2+0.05*COS(SINE/22))*CFrame.Angles(math.rad(0+4*SIN(SINE/22)),math.rad(20+4*SIN(SINE/22)),math.rad(-15+4*SIN(SINE/22))),Alpha)  
             spin2()        
+        			elseif mode == "MAGICIAN" then
+
+                        att2.Parent = c["Torso"]
+            att2.Position = Vector3.new(0,0,0.5)
+            att2.Orientation = Vector3.new(-0, 90, 0)
+
+			local Alpha = .1
+			NK.C0 = NK.C0:lerp(NKC0,Alpha)
+            game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0:lerp(RSC0*CFrame.new(-1.5,1,1.6)*CFrame.Angles(math.rad(0),math.rad(45),math.rad(45)),Alpha)
+            game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0:lerp(LSC0*CFrame.new(0,-4,10)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
+			RJ.C0 = RJ.C0:lerp(RJC0*CFrame.new(0-0.5*COS(SINE/22),10+5*COS(SINE/22),3+2*COS(SINE/22))*CFrame.Angles(math.rad(0),math.rad(20),math.rad(5-4*SIN(SINE/22))),Alpha)
+			RS.C0 = RS.C0:lerp(RSC0*CFrame.new(-0.2,-0.2,-0.4)*CFrame.Angles(math.rad(60-4*SIN(SINE/22)),math.rad(10-4*SIN(SINE/22)),math.rad(-30-4*SIN(SINE/22))),Alpha)
+			LS.C0 = LS.C0:lerp(LSC0*CFrame.new(0.2,-.4,-0.4)*CFrame.Angles(math.rad(130+4*SIN(SINE/22)),math.rad(-10+4*SIN(SINE/22)),math.rad(30+4*SIN(SINE/22))),Alpha)
+			RH.C0 = RH.C0:lerp(RHC0*CFrame.new(0+0.05*COS(SINE/22),0.5,-0.8+0.05*COS(SINE/22))*CFrame.Angles(math.rad(-5-4*SIN(SINE/22)),math.rad(-15-4*SIN(SINE/22)),math.rad(15-4*SIN(SINE/22))),Alpha)
+			LH.C0 = LH.C0:lerp(LHC0*CFrame.new(-0.2+0.05*COS(SINE/22),-0.2,-0.2+0.05*COS(SINE/22))*CFrame.Angles(math.rad(0+4*SIN(SINE/22)),math.rad(20+4*SIN(SINE/22)),math.rad(-15+4*SIN(SINE/22))),Alpha)  
+            spin2()                    
         end 
 	 elseif TORSOVELOCITY > 1 and HITFLOOR ~= nil then
 		ANIM = "Walk"
@@ -1872,6 +1962,15 @@ game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.
 game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
 			NK.C0 = NK.C0:lerp(NKC0,Alpha)
 			RJ.C0 = RJ.C0:lerp(RJC0*CFrame.new(0-0.05*COS(SINE/22),2+1*COS(SINE/60),0-0.05*COS(SINE/22))*CFrame.Angles(math.rad(-40),math.rad(0-10*SIN(SINE/22)),math.rad(0)),Alpha)
+			RS.C0 = RS.C0:lerp(RSC0*CFrame.new(-0.1,-0.25,0.2)*CFrame.Angles(math.rad(-45),math.rad(-25-4*SIN(SINE/22)),math.rad(40)),Alpha)
+			LS.C0 = LS.C0:lerp(LSC0*CFrame.new(0.1,-0.25,0.2)*CFrame.Angles(math.rad(-45),math.rad(25+4*SIN(SINE/22)),math.rad(-40)),Alpha)
+			RH.C0 = RH.C0:lerp(RHC0*CFrame.new(0+0.05*COS(SINE/22),0.5,-0.8+0.05*COS(SINE/22))*CFrame.Angles(math.rad(-5),math.rad(-15-4*SIN(SINE/22)),math.rad(15)),Alpha)
+			LH.C0 = LH.C0:lerp(LHC0*CFrame.new(-0.2+0.05*COS(SINE/22),-0.2,-0.2+0.05*COS(SINE/22))*CFrame.Angles(math.rad(0),math.rad(15+4*SIN(SINE/22)),math.rad(-0)),Alpha)
+        	elseif mode == "MAGICIAN" then
+			NK.C0 = NK.C0:lerp(NKC0,Alpha)
+			game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,-5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
+game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
+			RJ.C0 = RJ.C0:lerp(RJC0*CFrame.new(0-0.05*COS(SINE/22),10+5*COS(SINE/60),0-0.05*COS(SINE/22))*CFrame.Angles(math.rad(-40),math.rad(0-10*SIN(SINE/22)),math.rad(0)),Alpha)
 			RS.C0 = RS.C0:lerp(RSC0*CFrame.new(-0.1,-0.25,0.2)*CFrame.Angles(math.rad(-45),math.rad(-25-4*SIN(SINE/22)),math.rad(40)),Alpha)
 			LS.C0 = LS.C0:lerp(LSC0*CFrame.new(0.1,-0.25,0.2)*CFrame.Angles(math.rad(-45),math.rad(25+4*SIN(SINE/22)),math.rad(-40)),Alpha)
 			RH.C0 = RH.C0:lerp(RHC0*CFrame.new(0+0.05*COS(SINE/22),0.5,-0.8+0.05*COS(SINE/22))*CFrame.Angles(math.rad(-5),math.rad(-15-4*SIN(SINE/22)),math.rad(15)),Alpha)
