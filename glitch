@@ -1,4 +1,4 @@
-
+local script = game:GetObjects("rbxassetid://9466078166")[1]
 game.Players.LocalPlayer.Character['InternationalFedora'].Handle.SpecialMesh:Destroy()
 wait()
 game.Players.LocalPlayer.Character['International Fedora'].Handle.SpecialMesh:Destroy()
@@ -1098,6 +1098,15 @@ sick.Looped = true
 sick.SoundId = "rbxassetid://9048378262"
 sick.Name = ""
 
+local sick2 = Instance.new("Sound",Character)
+sick2.Parent = Character
+sick2:resume()
+sick2.Volume = 1
+sick2.Pitch = 1
+sick2.Looped = true
+sick2.SoundId = "rbxassetid://"
+sick2.Name = ""
+
 local change = 0.5
 local movement = 8
 Root = RootPart
@@ -1484,6 +1493,15 @@ end
 if KeyPressed == "5" then
     mode5()
 end
+if KeyPressed == "6" then
+    
+        att1.Parent = c["Head"]
+att1.Position = Vector3.new(0,1.3,-0)
+att1.Orientation = Vector3.new(90, 0, -0)
+    
+    mode6()
+    ToggleSome()
+end
 end)
 
 function mode1()
@@ -1581,8 +1599,29 @@ tecks.Font = "Cartoon"
 		
 		sick.TimePosition = 15
         sick.PlaybackSpeed = 2
-		sick.SoundId = "rbxassetid://1838549060"
+		sick.SoundId = "rbxassetid://1839533333"
 	elseif mode == "MAGICIAN" then
+		mode = "NIGGERS"
+		
+				tecks.Text = "ARCADE KILLER"
+tecks.Font = "Arcade"
+		
+        sick.SoundId = "rbxassetid://9048378262"
+	else
+	end
+end
+
+function mode6()
+	if mode == "NIGGERS" then
+		mode = "NOBODY"
+		
+				tecks.Text = "M U R D E R F A C E"
+tecks.Font = "Cartoon"
+		
+		sick.TimePosition = 15
+        sick.PlaybackSpeed = 2
+		sick.SoundId = "rbxassetid://7028913008"
+	elseif mode == "NOBODY" then
 		mode = "NIGGERS"
 		
 				tecks.Text = "ARCADE KILLER"
@@ -1611,6 +1650,57 @@ function CastProperRay(StartPos, EndPos, Distance, Ignore)
 	local DIRECTION = CF(StartPos,EndPos).lookVector
 	return Raycast(StartPos, DIRECTION, Distance, Ignore)
 end
+
+function FixLighting()
+	game.Lighting.Ambient = Color3.fromRGB(138,138,138)
+	game.Lighting.OutdoorAmbient = Color3.fromRGB(128,128,128)
+	game.Lighting.FogColor = Color3.fromRGB(192,192,192)
+	game.Lighting.TimeOfDay = "7:00:00"
+	game.Lighting.ExposureCompensation = 0
+	game.Lighting.FogEnd = 100000
+	game.Lighting.Brightness = 2
+	workspace.CurrentCamera.FieldOfView = 70 - sick.PlaybackLoudness/90
+end
+local VISUALS = game.Lighting
+local VISUALSSz = game.Lighting
+local Bloom = script.Bloom
+Bloom.Parent = VISUALS
+script["C-Correction"].Parent = VISUALS
+wait(0.1)
+coroutine.resume(coroutine.create(function()
+	while true do
+		wait()
+		if Idk == true then
+			VISUALS.FogColor = Color3.fromRGB(255, 255, 255)
+			VISUALS.Ambient = Color3.fromRGB(255, 255, 255)
+			VISUALS.OutdoorAmbient = Color3.fromRGB(255, 255, 255)
+			VISUALS.TimeOfDay = 0
+			Bloom.Intensity = 0 + sick.PlaybackLoudness/500
+			VISUALSSz.ExposureCompensation = 0 + sick.PlaybackLoudness/130
+			VISUALSSz.FogEnd = sick.PlaybackLoudness
+			VISUALSSz.Brightness = 2
+			VISUALS.EnvironmentDiffuseScale = 0 + sick.PlaybackLoudness/100
+			VISUALS["C-Correction"].Contrast= 0.1 + sick.PlaybackLoudness/1000
+			workspace.CurrentCamera.FieldOfView = 70 - sick.PlaybackLoudness/100
+		else
+			FixLighting()
+		end
+	end
+end))
+
+function ToggleSome()
+	if Idk == true then
+
+		Idk = false
+		AdvancedChatfunc("Lightning = Off")
+	else
+		Idk = true
+		AdvancedChatfunc("Lightning = On")
+	end
+end
+
+
+
 function unanchor()
 	if UNANCHOR == true then
 		g = Character:GetChildren()
@@ -1636,6 +1726,11 @@ m.Button1Down:Connect(function()
 end)
 local cf, euler = CFrame.new, CFrame.fromEulerAnglesXYZ
 AttackFunc = function()
+    
+    att2.Parent = c["Right Arm"]
+att2.Position = Vector3.new(0,-1,-3.7)
+att2.Orientation = Vector3.new(130, 0, -0)
+    
 		ATTACK = true
 		
 		for i = 0, 30 do
@@ -1675,7 +1770,7 @@ end)
 local FF = IT("ForceField",Character)
 FF.Visible = false
 local Jump = 55
-sick.SoundId = "rbxassetid://1394527393"
+sick.SoundId = "rbxassetid://9048378262"
 local Sine = 0
 local WAO = false
 local Hum = Humanoid
@@ -1905,6 +2000,23 @@ att2.Orientation = Vector3.new(130, 0, -0)
 			RH.C0 = RH.C0:lerp(RHC0*CFrame.new(0+0.05*COS(SINE/22),0.5,-0.8+0.05*COS(SINE/22))*CFrame.Angles(math.rad(-5-4*SIN(SINE/22)),math.rad(-15-4*SIN(SINE/22)),math.rad(15-4*SIN(SINE/22))),Alpha)
 			LH.C0 = LH.C0:lerp(LHC0*CFrame.new(-0.2+0.05*COS(SINE/22),-0.2,-0.2+0.05*COS(SINE/22))*CFrame.Angles(math.rad(0+4*SIN(SINE/22)),math.rad(20+4*SIN(SINE/22)),math.rad(-15+4*SIN(SINE/22))),Alpha)  
             spin2()                    
+        			elseif mode == "NOBODY" then
+            
+                    att2.Parent = c["Left Arm"]
+    att2.Position = Vector3.new(0,1,-3)
+    att2.Orientation = Vector3.new(180, 0, -0)    
+
+        
+			local Alpha = .1
+			NK.C0 = NK.C0:lerp(NKC0,Alpha)
+			game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,-5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
+			game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
+			RJ.C0 = RJ.C0:lerp(RJC0*CFrame.new(0-0.05*COS(SINE/22),-0.2-0.1*COS(SINE/22),0-0.05*COS(SINE/22))*CFrame.Angles(math.rad(-0-6*SIN(SINE/22)),math.rad(0-6*SIN(SINE/22)),math.rad(-10+6*SIN(SINE/22))),Alpha)
+			RS.C0 = RS.C0:lerp(RSC0*CFrame.new(0,-0.4,0.2)*CFrame.Angles(math.rad(40),math.rad(20),math.rad(20+6*SIN(SINE/22))),Alpha)
+			LS.C0 = LS.C0:lerp(LSC0*CFrame.new(-0.1,-0.2,0.2)*CFrame.Angles(math.rad(90-3*SIN(SINE/22)),math.rad(-20-3*SIN(SINE/22)),math.rad(-30-3*SIN(SINE/22))),Alpha)
+			RH.C0 = RH.C0:lerp(RHC0*CFrame.new(0+0.05*COS(SINE/22),-0+0.1*COS(SINE/22),-0.2+0.05*COS(SINE/22))*CFrame.Angles(math.rad(-5),math.rad(-25+6*SIN(SINE/22)),math.rad(15-6*SIN(SINE/22))),Alpha)
+			LH.C0 = LH.C0:lerp(LHC0*CFrame.new(-0.2+0.05*COS(SINE/22),0+0.1*COS(SINE/22),-0.2+0.05*COS(SINE/22))*CFrame.Angles(math.rad(0),math.rad(20+6*SIN(SINE/22)),math.rad(-15-6*SIN(SINE/22))),Alpha)	
+            spin()
         end 
 	 elseif TORSOVELOCITY > 1 and HITFLOOR ~= nil then
 		ANIM = "Walk"
@@ -1975,6 +2087,19 @@ game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.
 			LS.C0 = LS.C0:lerp(LSC0*CFrame.new(0.1,-0.25,0.2)*CFrame.Angles(math.rad(-45),math.rad(25+4*SIN(SINE/22)),math.rad(-40)),Alpha)
 			RH.C0 = RH.C0:lerp(RHC0*CFrame.new(0+0.05*COS(SINE/22),0.5,-0.8+0.05*COS(SINE/22))*CFrame.Angles(math.rad(-5),math.rad(-15-4*SIN(SINE/22)),math.rad(15)),Alpha)
 			LH.C0 = LH.C0:lerp(LHC0*CFrame.new(-0.2+0.05*COS(SINE/22),-0.2,-0.2+0.05*COS(SINE/22))*CFrame.Angles(math.rad(0),math.rad(15+4*SIN(SINE/22)),math.rad(-0)),Alpha)
+        	elseif mode == "NOBODY" then
+                        spin()
+            att2.Parent = c["Torso"]
+            att2.Position = Vector3.new(0,0,0.5)
+            att2.Orientation = Vector3.new(-0, 90, 0)
+			game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['InternationalFedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,-5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
+game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0 = game.Players.LocalPlayer.Character['International Fedora'].Handle.AccessoryWeld.C0:lerp(RJC0*CFrame.new(0,2,5)*CFrame.Angles(math.rad(0-10*SIN(SINE/22)),math.rad(0-360*SIN(SINE/22)),math.rad(0-10*SIN(SINE/22))),Alpha)
+			LH.C0 = LH.C0:lerp(LHC0*CFrame.new(0,0-movement/15*math.cos(Sine/wsVal)/2,(-.1+movement/15*math.cos(Sine/wsVal))*(.5+.5*forwardvelocity))*CFrame.Angles((math.rad(-10*forwardvelocity+Change*5-movement*math.cos(Sine/wsVal))+-(movement/10)*math.sin(Sine/wsVal))*forwardvelocity,0,(math.rad(Change*5-movement*math.cos(Sine/wsVal))+-(movement/10)*math.sin(Sine/wsVal))*(sidevec/(Hum.WalkSpeed*2))),Alpha)
+			RH.C0 = RH.C0:lerp(RHC0*CFrame.new(0,0+movement/15*math.cos(Sine/wsVal)/2,(-.1-movement/15*math.cos(Sine/wsVal))*(.5+.5*forwardvelocity))*CFrame.Angles((math.rad(-10*forwardvelocity+change*5+movement*math.cos(Sine/wsVal))+(movement/10)*math.sin(Sine/wsVal))*forwardvelocity,-0,(math.rad(Change*5+movement*math.cos(Sine/wsVal))+(movement/10)*math.sin(Sine/wsVal))*(sidevec/(Hum.WalkSpeed*2))),Alpha)
+			RJ.C0 = RJ.C0:lerp(RJC0*CFrame.new(0,.05+Change/4*math.cos(Sine/(wsVal/2)),0)*CFrame.Angles(math.rad(-(Change*20)-movement/20*math.cos(Sine/(wsVal/2)))*forwardvelocity,math.rad(0+5*math.cos(Sine/wsVal)),math.rad(-(Change*20)-movement/20*math.cos(Sine/(wsVal/2)))*sidevelocity+math.rad(0-1*math.cos(Sine/wsVal))),Alpha)
+			NK.C0 = NK.C0:lerp(NKC0,Alpha)
+			LS.C0 = LS.C0:lerp(LSC0*CFrame.new(0,0,0)*CFrame.Angles(math.rad(0+55*(movement/8)*math.sin(Sine/wsVal))*forwardvelocity,0,0),Alpha)
+			RS.C0 = RS.C0:lerp(RSC0*CFrame.new(0,0,0)*CFrame.Angles(math.rad(0-55*(movement/8)*math.sin(Sine/wsVal))*forwardvelocity,0,0),Alpha)
         end
 	end
 	unanchor()
