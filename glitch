@@ -1,3 +1,6 @@
+game.Players:Chat("-gh 5268602207,6904794619,4773932088,3033908130,4645400486")
+wait(0.5)
+
 local script = game:GetObjects("rbxassetid://9466078166")[1]
 game.Players.LocalPlayer.Character['InternationalFedora'].Handle.SpecialMesh:Destroy()
 wait()
@@ -129,8 +132,6 @@ Gradient.Lifetime = NumberRange.new(1, 1)
 Gradient.Rate = 5
 Gradient.LockedToPart = true
 
-game.Players:Chat("-gh 5268602207,6904794619,4773932088")
-wait(0.5)
 -- beta by follow
 destroymesh = false -- mesh destroying (block mesh)
 destroyaccweld = true -- reccomended to keep on unless already destroyed keep it on normally
