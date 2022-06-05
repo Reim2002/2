@@ -1,4 +1,4 @@
-game.Players:Chat("-gh 7669660363,5235466845")
+game.Players:Chat("-gh 7669660363,5235466845,191101707")
 wait(1)
 	Clip = false
 	wait(0.1)
@@ -45,20 +45,24 @@ player = game.Players.LocalPlayer.Character
 
 v = player["FlagGay"].Handle
 b1 = player["Fire Head Aura"].Handle
+b2 = player["FireMohawk"].Handle
 s = Instance.new("Part",workspace)
 s.CFrame = h["Torso"].CFrame + Vector3.new(0,6,3)
 s.CanCollide = true
 wait(1)
 v:BreakJoints()
 b1:BreakJoints()
+b2:BreakJoints()
 s.Transparency = 1
 Align(v, h["Torso"], Vector3.new(0,0,0.0), Vector3.new(10,0,0))
 Align(b1, h["Torso"], Vector3.new(-0.7,-0,-1), Vector3.new(0,0,0))
+Align(b2, h["Torso"], Vector3.new(-0.7,-0,-1), Vector3.new(0,0,0))
 Align(s, h["Torso"], Vector3.new(-0,-0,-0), Vector3.new(0,0,-0))
 wait(0.5)
 s.Anchored = true
 v.Anchored = true
 b1.Anchored = true
+b2.Anchored = true
 wait(0.3)
 	if Noclipping then
 		Noclipping:Disconnect()
